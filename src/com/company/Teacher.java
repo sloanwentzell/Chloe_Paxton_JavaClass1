@@ -11,7 +11,7 @@ public class Teacher {
 
     void describe() {
      System.out.println("My name is " + name );
-     System.out.println("I'm " + age "years old");
+     System.out.println("I am " + age "years old");
         if(gender) {
             System.out.println("I'm a female.");
         } else {

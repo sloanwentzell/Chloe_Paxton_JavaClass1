@@ -6,12 +6,12 @@ public class Teacher {
     String subject;
     boolean gender;
     int YearsOfTeaching;
-    int location;
+    String location;
     boolean FounderOfSchool;
 
     void describe() {
      System.out.println("My name is " + name );
-     System.out.println("I am " + age "years old");
+     System.out.println("I am " + age + "years old");
         if(gender) {
             System.out.println("I'm a female.");
         } else {
@@ -21,7 +21,7 @@ public class Teacher {
      System.out.println("I taught for " + YearsOfTeaching);
      System.out.println("I teach at " + location);
         if(FounderOfSchool){
-            System.out.println("I'm the founder of this school!");
+            System.out.println("I'm one of the founders of this school!");
         } else {
             System.out.println("I join the school!");
         }

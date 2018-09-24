@@ -76,6 +76,7 @@ class MyClass {
         int avgGrade = (steve.getGrade() + beth.getGrade() + clive.getGrade())/3;
         System.out.println("The average grade of students surveyed is grade " + avgGrade + ".");
 
+
         // Say Hi.
         System.out.println("Say hello guys!!");
         mrlatimer.sayHello();

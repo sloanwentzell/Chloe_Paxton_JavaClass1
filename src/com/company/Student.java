@@ -1,9 +1,7 @@
 package com.company;
 
-class Student {
+class Student extends SC_Common{
 
-    int age;
-    String name;
 
     void role() {
         System.out.println("My name is " + name + ". I'm a student in " + (age - 6) + "th grade.");

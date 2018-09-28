@@ -4,113 +4,58 @@ class MyClass {
 
     public static void main(String[] args) {
 
-        Teacher mrlatimer = new Teacher();
-        mrlatimer.name = "Mr.Latimer";
-        mrlatimer.age = 38;
-        mrlatimer.gender = false;
-        mrlatimer.subject = "math";
-        mrlatimer.YearsOfTeaching = 10;
-        mrlatimer.location = "Science Leadership Academy";
-        mrlatimer.FounderOfSchool = false;
+        SC_Common[] people = new SC_Common[7];
 
-        Teacher mrhernandez = new Teacher();
-        mrhernandez.name = "Mr.Hernandez";
-        mrhernandez.age = 41;
-        mrhernandez.gender = false;
-        mrhernandez.subject = "an elective";
-        mrhernandez.YearsOfTeaching = 15;
-        mrhernandez.location = "Science Leadership Academy";
-        mrhernandez.FounderOfSchool = false;
+        people[0] = new Teacher("Mr.Latimer", 38, false, "math",
+                10, "Science Leadership Academy", false);
 
-        Teacher msjonas = new Teacher();
-        msjonas.name = "Ms.Jonas";
-        msjonas.age = 35;
-        msjonas.gender = true;
-        msjonas.subject = "history";
-        msjonas.YearsOfTeaching = 10;
-        msjonas.location = "Science Leadership Academy";
-        msjonas.FounderOfSchool = false;
+        people[1] = new Teacher("Mr.Hernandez", 41, false, "an elective",
+                15, "Science Leadership Academy", false);
 
-        Teacher mspahomov = new Teacher();
-        mspahomov.name = "Ms.Pahomov";
-        mspahomov.age = 31;
-        mspahomov.gender = true;
-        mspahomov.subject = "english";
-        mspahomov.YearsOfTeaching = 9;
-        mspahomov.location = "Science Leadership Academy";
-        mspahomov.FounderOfSchool = false;
+        people[2] = new Teacher("Ms.Jonas", 35, true, "history",
+                10, "Science Leadership Academy", false);
 
-        Teacher mssessa = new Teacher();
-        mssessa.name = "Ms.Jonas";
-        mssessa.age = 28;
-        mssessa.gender = true;
-        mssessa.subject = "science";
-        mssessa.YearsOfTeaching = 8;
-        mssessa.location = "Science Leadership Academy";
-        mssessa.FounderOfSchool = false;
+        people[3] = new Teacher("Ms.Pahomov", 31, true, "english",
+                9, "Science Leadership Academy", false);
 
+        people[4] = new Teacher("Ms.Sessa", 28, true, "science",
+                8, "Science Leadership Academy", false);
 
+        people[5] = new Student("Steve Smith", 15);
 
-        Student steve = new Student();
-        steve.age = 15;
-        steve.name = "Steve Smith";
+        people[6] = new Student("Beth Burnham", 18);
 
-        Student beth = new Student();
-        beth.age = 18;
-        beth.name = "Beth Burnham";
-
-        Student clive = new Student();
-        clive.age = 17;
-        clive.name = "Clive Clugston";
-
-        System.out.println("Who are you?");
-        System.out.println();
-        steve.role();
-        System.out.println();
-        beth.role();
-        System.out.println();
-        clive.role();
-        System.out.println();
-
-
-        int avgGrade = (steve.getGrade() + beth.getGrade() + clive.getGrade())/3;
-        System.out.println("The average grade of students surveyed is grade " + avgGrade + ".");
-
+        people[7] = new Student("Clive Clugston", 17);
 
         // Say Hi.
-        System.out.println("Say hello guys!!");
-        mrlatimer.sayHello();
-        mrhernandez.sayHello();
-        msjonas.sayHello();
-        mspahomov.sayHello();
-        mssessa.sayHello();
-        System.out.println();
+        for (int i = 0; i < 7; i++) {
+            people[i].sayHello();
+        }
 
         // Describe.
         System.out.println("Describe Yourself");
-        mrlatimer.describe();
-        System.out.println();
-        mrhernandez.describe();
-        System.out.println();
-        msjonas.describe();
-        System.out.println();
-        mspahomov.describe();
-        System.out.println();
-        mssessa.describe();
-        System.out.println();
+        for (int i = 0; i < 5; i++) {
+            people[i].describe();
+        }
 
-        //Teach!
-        System.out.println("Start teaching!");
-        mrlatimer.teach();
-        System.out.println();
-        mrhernandez.teach();
-        System.out.println();
-        msjonas.teach();
-        System.out.println();
-        mspahomov.teach();
-        System.out.println();
-        mssessa.teach();
-        System.out.println();
+        //Student Describe
+        System.out.println("Who are you?");
+        for (int i = 5; i < 7; i++) {
+            people[i].role();
+        }
+        //Get Grade
+            System.out.println("What's the grade?");
+            for (int i = 5; i < 7; i++) {
+                people[i].getGrade();
+            }
+
+            //Teach!
+            System.out.println("Start teaching!");
+            for (int i = 0; i < 5; i++) {
+                people[i].teach();
+            }
+
+        }
     }
 
-}
+
